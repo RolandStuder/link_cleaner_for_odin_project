@@ -31,7 +31,8 @@ def remove_invalid_lines text
 				result << line
 				puts "Valid  :" + line
 			else
-				puts "INVALID:" + line
+				line_feedback = "INVALID:".red + line.red
+				print line_feedback
 				counter += 1
 				invalid_links << link
 			end
@@ -43,4 +44,35 @@ def remove_invalid_lines text
 	puts "MANUAL CHECK WITH:"
 	puts "open -a Google\\ Chrome " + invalid_links.join(' ')
 	return result
+end
+
+class String
+  # colorization
+  def colorize(color_code)
+    "\e[#{color_code}m#{self}\e[0m"
+  end
+
+  def red
+    colorize(31)
+  end
+
+  def green
+    colorize(32)
+  end
+
+  def yellow
+    colorize(33)
+  end
+
+  def blue
+    colorize(34)
+  end
+
+  def pink
+    colorize(35)
+  end
+
+  def light_blue
+    colorize(36)
+  end
 end

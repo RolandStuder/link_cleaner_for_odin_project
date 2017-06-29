@@ -5,9 +5,8 @@
 
 ## How to use
 
-* Put Markdown do in `./input.md`
-* run `ruby clean.rb`
-* Use the revised `./output.md`
+* run `ruby clean.rb file_path`
+* the file in the file_path will be overwritten
 * Optionally do a manual check by using the suggested command to open all removed links in Google Chrome
 
 ## Install
