@@ -43,6 +43,7 @@ def remove_invalid_lines text
 	puts "======== #{counter} RESULTS REMOVED ========="
 	puts "MANUAL CHECK WITH:"
 	puts "open -a Google\\ Chrome " + invalid_links.join(' ')
+	system "open -a Google\\ Chrome " + invalid_links.join(' ')
 	return result
 end
 

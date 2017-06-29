@@ -6,12 +6,8 @@ contents = File.read(file_path)
 puts "Checking #{contents.lines.length} lines? Press Enter to Continue"
 input = $stdin.gets.chomp
 
-if input == ""
-  output = remove_invalid_lines contents
+output = remove_invalid_lines contents
 
-  puts "Save changes? (y/n)"
-  input = $stdin.gets.chomp
-  File.open('./output.md', 'w') { |file| file.write(output) } if input == "y"
-end
+File.open(file_path, 'w') { |file| file.write(output) }
 
 
